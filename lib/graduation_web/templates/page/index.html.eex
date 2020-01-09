@@ -1,0 +1,4 @@
+<section class="phx-hero">
+  <h1><%= gettext "Welcome to %{name}!", name: "Graduation" %></h1>
+  <p>A Phoenix web client<br/>for managing graduation tasks.</p>
+</section>
