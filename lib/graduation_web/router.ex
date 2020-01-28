@@ -20,10 +20,20 @@ defmodule GraduationWeb.Router do
     get "/", PageController, :index
     resources "/users", UserController, only: [:index, :new, :show, :create]
     resources "/sessions", SessionController, only: [:new, :create, :delete]
+    resources "/gradrules", GradRuleController
+    resources "/courses", CourseController
+    resources "/courseachievements", CourseAchievementController
+    resources "/studenttranscriptreports", TranscriptReportController
+    resources "/studentachievementreports", StudentAchievementReportController
   end
 
   # Other scopes may use custom stacks.
-  # scope "/api", GraduationWeb do
-  #   pipe_through :api
-  # end
+  scope "/api", GraduationWeb.Api, as: :api do
+    pipe_through :api
+
+    resources "/transcripts-api", Transcripts - apiController, only: [:index, :show]
+
+    resources "/studentachievementreports-api", StudentAchievementReport - apiController,
+      only: [:index, :show]
+  end
 end
