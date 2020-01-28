@@ -1,0 +1,54 @@
+                          page_path  GET     /                                      GraduationWeb.PageController :index
+                          user_path  GET     /users                                 GraduationWeb.UserController :index
+                          user_path  GET     /users/new                             GraduationWeb.UserController :new
+                          user_path  GET     /users/:id                             GraduationWeb.UserController :show
+                          user_path  POST    /users                                 GraduationWeb.UserController :create
+                       session_path  GET     /sessions/new                          GraduationWeb.SessionController :new
+                       session_path  POST    /sessions                              GraduationWeb.SessionController :create
+                       session_path  DELETE  /sessions/:id                          GraduationWeb.SessionController :delete
+                     grad_rule_path  GET     /gradrules                             GraduationWeb.GradRuleController :index
+                     grad_rule_path  GET     /gradrules/:id/edit                    GraduationWeb.GradRuleController :edit
+                     grad_rule_path  GET     /gradrules/new                         GraduationWeb.GradRuleController :new
+                     grad_rule_path  GET     /gradrules/:id                         GraduationWeb.GradRuleController :show
+                     grad_rule_path  POST    /gradrules                             GraduationWeb.GradRuleController :create
+                     grad_rule_path  PATCH   /gradrules/:id                         GraduationWeb.GradRuleController :update
+                                     PUT     /gradrules/:id                         GraduationWeb.GradRuleController :update
+                     grad_rule_path  DELETE  /gradrules/:id                         GraduationWeb.GradRuleController :delete
+                        course_path  GET     /courses                               GraduationWeb.CourseController :index
+                        course_path  GET     /courses/:id/edit                      GraduationWeb.CourseController :edit
+                        course_path  GET     /courses/new                           GraduationWeb.CourseController :new
+                        course_path  GET     /courses/:id                           GraduationWeb.CourseController :show
+                        course_path  POST    /courses                               GraduationWeb.CourseController :create
+                        course_path  PATCH   /courses/:id                           GraduationWeb.CourseController :update
+                                     PUT     /courses/:id                           GraduationWeb.CourseController :update
+                        course_path  DELETE  /courses/:id                           GraduationWeb.CourseController :delete
+            course_achievement_path  GET     /courseachievements                    GraduationWeb.CourseAchievementController :index
+            course_achievement_path  GET     /courseachievements/:id/edit           GraduationWeb.CourseAchievementController :edit
+            course_achievement_path  GET     /courseachievements/new                GraduationWeb.CourseAchievementController :new
+            course_achievement_path  GET     /courseachievements/:id                GraduationWeb.CourseAchievementController :show
+            course_achievement_path  POST    /courseachievements                    GraduationWeb.CourseAchievementController :create
+            course_achievement_path  PATCH   /courseachievements/:id                GraduationWeb.CourseAchievementController :update
+                                     PUT     /courseachievements/:id                GraduationWeb.CourseAchievementController :update
+            course_achievement_path  DELETE  /courseachievements/:id                GraduationWeb.CourseAchievementController :delete
+             transcript_report_path  GET     /studenttranscriptreports              GraduationWeb.TranscriptReportController :index
+             transcript_report_path  GET     /studenttranscriptreports/:id/edit     GraduationWeb.TranscriptReportController :edit
+             transcript_report_path  GET     /studenttranscriptreports/new          GraduationWeb.TranscriptReportController :new
+             transcript_report_path  GET     /studenttranscriptreports/:id          GraduationWeb.TranscriptReportController :show
+             transcript_report_path  POST    /studenttranscriptreports              GraduationWeb.TranscriptReportController :create
+             transcript_report_path  PATCH   /studenttranscriptreports/:id          GraduationWeb.TranscriptReportController :update
+                                     PUT     /studenttranscriptreports/:id          GraduationWeb.TranscriptReportController :update
+             transcript_report_path  DELETE  /studenttranscriptreports/:id          GraduationWeb.TranscriptReportController :delete
+    student_achievement_report_path  GET     /studentachievementreports             GraduationWeb.StudentAchievementReportController :index
+    student_achievement_report_path  GET     /studentachievementreports/:id/edit    GraduationWeb.StudentAchievementReportController :edit
+    student_achievement_report_path  GET     /studentachievementreports/new         GraduationWeb.StudentAchievementReportController :new
+    student_achievement_report_path  GET     /studentachievementreports/:id         GraduationWeb.StudentAchievementReportController :show
+    student_achievement_report_path  POST    /studentachievementreports             GraduationWeb.StudentAchievementReportController :create
+    student_achievement_report_path  PATCH   /studentachievementreports/:id         GraduationWeb.StudentAchievementReportController :update
+                                     PUT     /studentachievementreports/:id         GraduationWeb.StudentAchievementReportController :update
+    student_achievement_report_path  DELETE  /studentachievementreports/:id         GraduationWeb.StudentAchievementReportController :delete
+                api_transcript_path  GET     /api/transcripts                       GraduationWeb.Api.TranscriptController :index
+                api_transcript_path  GET     /api/transcripts/:id                   GraduationWeb.Api.TranscriptController :show
+api_student_achievement_report_path  GET     /api/studentachievementreports         GraduationWeb.Api.StudentAchievementReportController :index
+api_student_achievement_report_path  GET     /api/studentachievementreports/:id     GraduationWeb.Api.StudentAchievementReportController :show
+                          websocket  WS      /socket/websocket                      GraduationWeb.UserSocket
+

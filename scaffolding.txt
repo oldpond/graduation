@@ -17,7 +17,7 @@ mix exto.migrate
 mix phx.gen.html GraduationStatus StudentTranscriptReports studenttranscriptreports user_id:references:users course_id:references:courses gradrule_id:references:gradrules letterGrade:string description:text
 mix ecto.migrate
 
-mix phx.gen.json GraduationStatus StudentAchievementReports studentachievementreports user_id:references:users course_id:references:courses gradrule_id:references:gradrules letterGrade:string description:text
+mix phx.gen.json GraduationStatusApi StudentAchievementReports studentachievementreports user_id:references:users course_id:references:courses gradrule_id:references:gradrules letterGrade:string description:text
 mix ecto.migrate
 mix phx.gen.json GraduationStatus StudentTranscriptReports studenttranscriptreports user_id:references:users course_id:references:courses gradrule_id:references:gradrules letterGrade:string description:text
 mix ecto.migrate

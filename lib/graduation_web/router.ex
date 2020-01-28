@@ -31,9 +31,9 @@ defmodule GraduationWeb.Router do
   scope "/api", GraduationWeb.Api, as: :api do
     pipe_through :api
 
-    resources "/transcripts-api", Transcripts - apiController, only: [:index, :show]
+    resources "/transcripts", TranscriptController, only: [:index, :show]
 
-    resources "/studentachievementreports-api", StudentAchievementReport - apiController,
+    resources "/studentachievementreports", StudentAchievementReportController,
       only: [:index, :show]
   end
 end
