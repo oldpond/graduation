@@ -6,19 +6,20 @@ mix phx.server
 html for courses, graduation rules, course achievements, student achievement reports, and student transcript reports
 json for student achievement reports and student transcript reports.
 
-mix phx.gen.html Graduation GradRule gradrules gradcode:string description:text non-compliance-message:text
+mix phx.gen.html Program ProgramRule programrules gradcode:string description:text non-compliance-message:text
 mix ecto.migrate
-mix phx.gen.html Curriculum Course courses description:text gradrule_id:references:gradrules
+mix phx.gen.html Curriculum Course courses description:text programrule_id:references:programrules
 mix ecto.migrate
-mix phx.gen.html Achievement CourseAchievement courseachievements user_id:references:users course_id:references:courses gradrule_id:references:gradrules letterGrade:string description:text
+mix phx.gen.html Achievement CourseAchievement courseachievements user_id:references:users course_id:references:courses programrule_id:references:programrules letterGrade:string description:text
 mix ecto.migrate
-mix phx.gen.html GraduationStatus StudentAchievementReports studentachievementreports user_id:references:users course_id:references:courses gradrule_id:references:gradrules letterGrade:string description:text
+mix phx.gen.html GraduationStatus StudentAchievementReport studentachievementreports user_id:references:users course_id:references:courses programcode_id:references:programrules letterGrade:string description:text
 mix exto.migrate
-mix phx.gen.html GraduationStatus StudentTranscriptReports studenttranscriptreports user_id:references:users course_id:references:courses gradrule_id:references:gradrules letterGrade:string description:text
+mix phx.gen.html GraduationStatus StudentTranscriptReport studenttranscriptreports user_id:references:users course_id:references:courses programrule_id:references:programrules letterGrade:string description:text
 mix ecto.migrate
 
-mix phx.gen.json GraduationStatusApi StudentAchievementReports studentachievementreports user_id:references:users course_id:references:courses gradrule_id:references:gradrules letterGrade:string description:text
+if not by hand then generate json api's
+mix phx.gen.json GraduationStatus StudentAchievementReport studentachievementreports user_id:references:users course_id:references:courses programrule_id:references:programrules letterGrade:string description:text
 mix ecto.migrate
-mix phx.gen.json GraduationStatus StudentTranscriptReports studenttranscriptreports user_id:references:users course_id:references:courses gradrule_id:references:gradrules letterGrade:string description:text
+mix phx.gen.json GraduationStatus StudentTranscriptReport studenttranscriptreports user_id:references:users course_id:references:courses programrule_id:references:programrules letterGrade:string description:text
 mix ecto.migrate
 

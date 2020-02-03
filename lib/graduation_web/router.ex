@@ -20,7 +20,7 @@ defmodule GraduationWeb.Router do
     get "/", PageController, :index
     resources "/users", UserController, only: [:index, :new, :show, :create]
     resources "/sessions", SessionController, only: [:new, :create, :delete]
-    resources "/gradrules", GradRuleController
+    resources "/programrules", ProgramRuleController
     resources "/courses", CourseController
     resources "/courseachievements", CourseAchievementController
     resources "/studenttranscriptreports", TranscriptReportController
