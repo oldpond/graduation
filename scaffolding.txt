@@ -6,11 +6,11 @@ mix phx.server
 html for courses, graduation rules, course achievements, student achievement reports, and student transcript reports
 json for student achievement reports and student transcript reports.
 
-mix phx.gen.html Program ProgramRule programrules gradcode:string description:text non-compliance-message:text
+mix phx.gen.html Program ProgramRule programrules requirementCode:integer requirementName:string requiredCredits:integer notMetDescription:text programCode:string
 mix ecto.migrate
-mix phx.gen.html Curriculum Course courses description:text programrule_id:references:programrules
+mix phx.gen.html Curriculum Course courses courseId:guid courseName:string courseCode:string courseGradeLevel:string credits:integer language:string courseStartDate:timestamp courseEndDate:timestamp programCode:string requirementCode:integer
 mix ecto.migrate
-mix phx.gen.html Achievement CourseAchievement courseachievements user_id:references:users course_id:references:courses programrule_id:references:programrules letterGrade:string description:text
+mix phx.gen.html Achievement CourseAchievement courseachievements courseAchievementId:guid pen:integer sessionDate:timestamp finalPercent:integer interimPercent:integer finalLetterGrade:string credits:integer courseId:references:courses courseType:"string" interimLetterGrade:string
 mix ecto.migrate
 mix phx.gen.html GraduationStatus StudentAchievementReport studentachievementreports user_id:references:users course_id:references:courses programcode_id:references:programrules letterGrade:string description:text
 mix exto.migrate
